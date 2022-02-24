@@ -1,7 +1,9 @@
 :root{
     --primary-color: #0970a0;    
     --background-primary-color: #0970a0; 
-    --background-secondary-color: #f6f6f6;   
+    --background-secondary-color: #f6f6f6; 
+    --background-overlay: rgba(0,0,0,0.8);
+    --background-modal: #fff;  
     --border-color: #d6d6d6;
     --title-color: #0d0d0d;
     --text-color: #3c3c3c;
@@ -84,7 +86,7 @@ main{
 }
 .modal{
     align-items: center;
-    background-color: var(--background-modal);
+    background-color: var(--background-overlay);
     display: none;
     height: 100vh;
     justify-content: center;
@@ -95,7 +97,7 @@ main{
     z-index: 10
 }
 .modal__container{
-    background-color: var(--background-primary-color);
+    background-color: var(--background-modal);
     border-radius: 8px; 
     flex-grow: 1;
     height: 80%;
@@ -111,30 +113,43 @@ main{
 .modal__cabecera{
     align-content: center;
     display: flex;
-    justify-content: space-between;
-    padding-bottom: 1rem
+    flex-direction: column;
+    gap: .35rem;
+    justify-content: center;
+    padding-bottom: 1rem;
+    position: relative;
+    text-align: center
 }  
 .modal__imagen{
     background-color: var(--background-secondary-color);
     border-radius: 8px;
-    height: calc(100% - 4rem);
+    height: calc(100% - 4.5rem);
     object-fit: cover;
     object-position: center;
     width: 100%
+}
+.modal__titulo{
+    color: var(--title-color);
+    font-size: 1.5rem
 }
 .modal__nombre{
     color: var(--text-color);
     font-size: 1rem
 }
 .modal__cerrar{
-    align-self: center
+    position: absolute;
+    right: -2.5rem;
+    top: -2.5rem
 }
 .modal__icon{
-    color: var(--color-red);
-    font-size: 1.5rem
+    border-radius: 50%;
+    background-color: var(--background-primary-color);
+    color: var(--color-white);
+    font-size: 1.25rem;
+    padding: .655rem .825rem
 }
 .modal__icon:hover{
-    color: rgba(202,9,40, .8)
+    color: var(--title-color)
 }
 footer p{
     color: var(--color-white)
