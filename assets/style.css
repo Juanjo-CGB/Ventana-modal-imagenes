@@ -1,6 +1,6 @@
 :root{
-    --primary-color: #0970a0;    
-    --background-primary-color: #0970a0; 
+    --primary-color: #3ab5a4;    
+    --background-primary-color: #222e33; 
     --background-secondary-color: #f6f6f6; 
     --background-overlay: rgba(0,0,0,0.8);
     --background-modal: #fff;  
@@ -35,10 +35,16 @@ header, footer{
     justify-content: center;
     padding: 1.5rem
 }
-.header__logo img{
-    height: auto;
+.header-logo__svg {
+    height: 3rem;
+    width: auto;
     transition: width .3s ease;
-    width: max-content
+}
+.header-logo__svg-primary {
+    fill:var(--primary-color);
+}
+.header-logo__svg-j {
+    fill:var(--color-white);
 }
 main{
     flex-grow: 1;
@@ -143,7 +149,7 @@ main{
 }
 .modal__icon{
     border-radius: 50%;
-    background-color: var(--background-primary-color);
+    background-color: var(--primary-color);
     color: var(--color-white);
     font-size: 1.25rem;
     padding: .655rem .825rem
@@ -151,6 +157,10 @@ main{
 .modal__icon:hover{
     color: var(--title-color)
 }
-footer p{
-    color: var(--color-white)
+.footer {
+    color: var(--color-white);
+    font-weight: 500;
+}
+.footer__copy-jjasdev {
+    color: var(--primary-color);
 }

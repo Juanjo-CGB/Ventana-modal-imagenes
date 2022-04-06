@@ -4,6 +4,18 @@
  * @author Juanjo Alonso Sánchez <jj.alonso@esla.com>
  * @copyright cgb@esla.com
  */
+/**
+  * Establece el año en el footer
+  * @returns {void}
+  */
+ function establecerYear(){ 
+    const today = new Date();
+    const nodoYear = document.querySelector(".footer__copy-year"); 
+    nodoYear.innerHTML = today.getFullYear();
+}
+//Pintar año
+establecerYear();
+
 const contenedorImagenes = document.querySelector(".galeria__container");
 //Desaturar imágenes
 contenedorImagenes.addEventListener("mouseover", (event) =>{      
